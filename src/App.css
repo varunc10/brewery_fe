@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.logout {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

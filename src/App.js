@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Button } from "antd";
+import Register from "./auth/register";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Login from "./auth/login";
+import { useAuth } from "./auth/AuthContext";
+import Home from "./home";
+import BreweryInfo from "./auth/brewery";
 
 function App() {
+  const { isAuthenticated, logout } = useAuth();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 style={{ textAlign: "center" }}>Brewery Finder</h1>
+      {isAuthenticated && (
+        <Button type="primary" className="logout" onClick={() => logout()}>
+          Logout
+        </Button>
+      )}
+      <Router>
+        <Routes>
+          <Route
+            path="/home"
+            element={isAuthenticated ? <Home /> : <Register />}
+          />
+          <Route
+            path="/brewery/:breweryId"
+            element={isAuthenticated ? <BreweryInfo /> : <Register />}
+          />
+          <Route
+            path="/"
+            element={isAuthenticated ? <Navigate to="/home" /> : <Register />}
+          />
+          <Route
+            path="/login"
+            element={isAuthenticated ? <Navigate to="/home" /> : <Login />}
+          />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
