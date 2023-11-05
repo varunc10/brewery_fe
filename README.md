@@ -34,7 +34,7 @@ Node.js and npm installed on your development machine.
 
 ### Installation
 
-To get started with this frontend application, follow these steps: git clone https://github.com/varunc10/fileURL-fe
+To get started with this frontend application, follow these steps: git clone https://github.com/varunc10/brewery_fe
 
 Change to the project directory: cd brewery_fe
 
