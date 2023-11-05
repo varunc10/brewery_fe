@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Brewery Viewer Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Brewery Frontend repository! This project is a web application that allows users to search for breweries and view their details.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+  - [Technologies Used](#technologies-used)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+    - [Login](#login)
+    - [Register](#register)
+    - [Home](#home)
+    - [BreweryInfo](#breweryInfo)
+  - [Authentication](#authentication)
+  - [Features](#features)
+  - [Deployment](#deployment)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- Ant Design for UI components
+- axios for handling HTTP requests
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Before you begin, ensure you have met the following requirements:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node.js and npm installed on your development machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started with this frontend application, follow these steps: git clone https://github.com/varunc10/fileURL-fe
 
-### `npm run eject`
+Change to the project directory: cd brewery_fe
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install the project dependencies: npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Login
 
-## Learn More
+To access the login page, navigate to /login. Here, you can log in with your existing account by providing your username and password. Upon successful login, you will be redirected to the file upload page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Register
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To access the register page, navigate to /register. Here, you can create a new account by providing a unique username and a secure password. After registering, you can log in using your newly created account.
 
-### Code Splitting
+### Home
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Users can search for breweries by city, name, or type. The component fetches data from a remote API and displays it in a table. It provides a personalized greeting, search options, and loading indicators for a user-friendly experience. Clicking on a brewery name leads to a details page.
 
-### Analyzing the Bundle Size
+### BreweryInfo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+displays detailed information about a specific brewery, along with user reviews. Users can view details such as the brewery's name, address, city, state, postal code, country, phone number, website, and brewery type. They can also see reviews left by other users, including their username, rating, and description.
 
-### Making a Progressive Web App
+Users have the option to add their own reviews, providing a rating on a scale of 1 to 5 and writing a description. The component offers a user-friendly interface for submitting reviews, allowing them to adjust the rating with a range input and enter their review in a textarea.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The component provides a "Home" button to navigate back to the main page and a "Submit Review" button to finalize the review submission.
 
-### Advanced Configuration
+## Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This frontend app uses a secure authentication method, ensuring the privacy and security of your account. It communicates with the backend service for user authentication, and users can create new accounts or log in with existing ones.
 
-### Deployment
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Search for breweries by city, name, or type.
+- View brewery details, including name, address, phone number, website, and more.
+- Leave reviews for breweries with a rating and description.
 
-### `npm run build` fails to minify
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hosted the frontend codebase on Vercel.
